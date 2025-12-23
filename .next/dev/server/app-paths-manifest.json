@@ -1,19 +1,6 @@
 {
-  "/admin/page": "app/admin/page.js",
-  "/advisor/page": "app/advisor/page.js",
-  "/dashboard/ai-chat/page": "app/dashboard/ai-chat/page.js",
-  "/dashboard/chat/page": "app/dashboard/chat/page.js",
-  "/dashboard/goal/page": "app/dashboard/goal/page.js",
-  "/dashboard/link/page": "app/dashboard/link/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/dashboard/page": "app/dashboard/page.js",
-  "/dashboard/payment/success/page": "app/dashboard/payment/success/page.js",
-  "/dashboard/points/page": "app/dashboard/points/page.js",
-  "/dashboard/products/page": "app/dashboard/products/page.js",
-  "/dashboard/promotion/page": "app/dashboard/promotion/page.js",
-  "/dashboard/reservations/page": "app/dashboard/reservations/page.js",
-  "/dashboard/settings/page": "app/dashboard/settings/page.js",
   "/login/page": "app/login/page.js",
-  "/oauth/redirect/page": "app/oauth/redirect/page.js",
-  "/page": "app/page.js",
-  "/signup/page": "app/signup/page.js"
+  "/page": "app/page.js"
 }

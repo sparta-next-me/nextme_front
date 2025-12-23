@@ -20,46 +20,58 @@ export default function ReservationsPage() {
     const token = localStorage.getItem("accessToken")
     const userId = localStorage.getItem("userId")
     
+    if (!token || !userId) {
+      router.push("/login");
+      return;
+    }
+
     try {
+      // 1. 본인 예약 목록 조회
       const res = await fetch(`http://34.50.7.8:30000/v1/reservations/users/${userId}`, {
         headers: { "Authorization": `Bearer ${token}` }
       })
       
+      // 2. 상품명 매칭을 위한 전체 상품 정보 조회 (디자인 유지용)
+      const prodRes = await fetch("http://34.50.7.8:30000/v1/products", {
+        headers: { "Authorization": `Bearer ${token}` }
+      })
+
       if (res.ok) {
         const data = await res.json()
+        let prodData: any[] = []
+        if (prodRes.ok) {
+          const pJson = await prodRes.json()
+          prodData = pJson.result || pJson
+        }
+
         let list = Array.isArray(data) ? data : (data.result || [])
         
-        // 💡 최신순 정렬 (생성일 기준 내림차순)
-        list = list.sort((a: any, b: any) => 
-          new Date(b.createdAt || b.reservationDate).getTime() - new Date(a.createdAt || a.reservationDate).getTime()
-        );
+        // 데이터 정제: 본인 것만 필터링 + 상품명 매칭 + 최신순 정렬
+        const formatted = list
+          .filter((r: any) => String(r.userId) === String(userId))
+          .map((r: any) => ({
+            ...r,
+            productName: r.productName || prodData.find((p: any) => p.productId === r.productId)?.productName || "금융 상담 서비스"
+          }))
+          .sort((a: any, b: any) => 
+            new Date(b.createdAt || b.reservationDate).getTime() - new Date(a.createdAt || a.reservationDate).getTime()
+          );
         
-        setReservations(list)
+        setReservations(formatted)
       }
     } catch (error) {
       console.error("데이터 로드 실패:", error)
     } finally {
       setIsLoading(false)
     }
-  }, [])
+  }, [router])
 
   useEffect(() => {
-    const saved = sessionStorage.getItem("temp_reservations");
-    if (saved) {
-      const parsed = JSON.parse(saved);
-      // 세션 데이터도 최신순 정렬
-      const sorted = parsed.sort((a: any, b: any) => 
-        new Date(b.createdAt || b.reservationDate).getTime() - new Date(a.createdAt || a.reservationDate).getTime()
-      );
-      setReservations(sorted);
-      setIsLoading(false);
-    } else {
-      fetchMyReservations();
-    }
+    // 💡 정보 혼선 방지를 위해 sessionStorage를 거치지 않고 직접 fetch합니다.
+    fetchMyReservations();
   }, [fetchMyReservations]);
 
   const handleCancelReservation = async (resItem: any) => {
-    // 💡 결제 취소를 위한 고유 ID 확인 (서버의 UUID 에러 방지)
     const targetOrderId = resItem.paymentId || resItem.orderId;
     
     if (!targetOrderId) {
@@ -72,7 +84,6 @@ export default function ReservationsPage() {
     const token = localStorage.getItem("accessToken");
     
     try {
-      // 1. 결제 취소 API 호출 (이 과정에서 서버가 예약 상태를 CANCELLED로 변경하고 슬롯을 풀어줌)
       const response = await fetch("http://34.50.7.8:30000/v1/payments/cancel", {
         method: "POST",
         headers: {
@@ -90,14 +101,8 @@ export default function ReservationsPage() {
 
       if (response.ok && (result.isSuccess !== false)) {
         alert("예약이 성공적으로 취소되었습니다.");
-        
-        // 💡 로컬 상태 업데이트: 취소된 상품은 리스트에서 제거하거나 상태 표시 변경
-        // 여기서는 리스트에서 즉시 제거하여 '다시 예약 가능'함을 암시합니다.
-        const updated = reservations.filter(item => item.reservationId !== resItem.reservationId);
-        setReservations(updated);
-        sessionStorage.setItem("temp_reservations", JSON.stringify(updated));
-        
-        // 메인 대시보드 등에서 상품 목록을 새로고침할 수 있도록 캐시 무효화 유도 (선택 사항)
+        // 취소 후 리스트 새로고침
+        fetchMyReservations();
       } else {
         alert(`취소 실패: ${result.message || "서버에서 거부되었습니다."}`);
       }
@@ -139,7 +144,7 @@ export default function ReservationsPage() {
 
         <div className="grid gap-4">
           {filteredReservations.length > 0 ? filteredReservations.map((res, idx) => (
-            <div key={idx} className={`bg-card p-6 rounded-2xl border border-border shadow-sm flex flex-col md:flex-row justify-between gap-4 transition-all ${res.status === 'CANCELLED' ? 'opacity-60' : 'hover:shadow-md'}`}>
+            <div key={res.reservationId || idx} className={`bg-card p-6 rounded-2xl border border-border shadow-sm flex flex-col md:flex-row justify-between gap-4 transition-all ${res.status === 'CANCELLED' ? 'opacity-60' : 'hover:shadow-md'}`}>
               <div className="space-y-3">
                 <div className="flex items-center gap-2">
                   <h3 className="text-lg font-black">{res.productName}</h3>
