@@ -16,7 +16,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // 깃허브에서 프론트엔드 소스 코드 가져오기
+                // 깃허브에서 프론트엔드 소스 코드 가져오기ㅇㅇ
                 checkout scm
             }
         }
