@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nextme-frontend
+  namespace: next-me
+  labels:
+    app: nextme-frontend
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
+  selector:
+    matchLabels:
+      app: nextme-frontend
+  template:
+    metadata:
+      labels:
+        app: nextme-frontend
+    spec:
+      imagePullSecrets:
+        - name: ghcr-cred
+      containers:
+        - name: nextme-frontend
+          # 젠킨스 빌드 시 생성되는 이미지 경로 (본인 설정에 맞게 확인)
+          image: ghcr.io/sparta-next-me/nextme-frontend:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000 # Dockerfile 내부 포트 (고정)
+
+          env:
+            - name: NODE_ENV
+              value: "production"
+            # 브라우저가 외부에서 백엔드 게이트웨이에 접속할 때 사용하는 주소
+            - name: NEXT_PUBLIC_API_URL
+              value: "http://34.50.7.8:30000"
+
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 15
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 30
+            periodSeconds: 20
+
+          resources:
+            requests:
+              cpu: "200m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nextme-frontend
+  namespace: next-me
+spec:
+  selector:
+    app: nextme-frontend
+  ports:
+    - name: http
+      port: 3001         # 브라우저에서 프론트에 접속할 때 쓸 포트 (80과 3000 회피)
+      targetPort: 3000   # 컨테이너 내부 넥스트 서버 포트
+  type: LoadBalancer     # 외부 IP를 할당받아 34.50.7.8:3001로 접속 가능하게 함

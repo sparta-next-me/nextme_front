@@ -14,7 +14,7 @@ export default function PaymentFailPage() {
         <XCircle className="h-16 w-16 text-red-500 mx-auto mb-4" />
         <h2 className="text-2xl font-black text-slate-900 mb-2">결제를 실패했어요</h2>
         <p className="text-slate-500 font-medium mb-8">{message}</p>
-        
+
         <div className="flex gap-3">
           <button onClick={() => router.back()} className="flex-1 py-4 bg-slate-100 text-slate-700 rounded-2xl font-bold hover:bg-slate-200 transition-all flex items-center justify-center gap-2">
             <RefreshCcw className="h-4 w-4" /> 다시 시도
