@@ -1046,7 +1046,7 @@ function DashboardPage() {
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
-                                            }, i, true, {
+                                            }, acc.accountId || `acc-${i}`, true, {
                                                 fileName: "[project]/app/dashboard/page.tsx",
                                                 lineNumber: 324,
                                                 columnNumber: 17
@@ -1960,7 +1960,7 @@ function DashboardPage() {
                                                             lineNumber: 497,
                                                             columnNumber: 21
                                                         }, this)
-                                                    }, void 0, false, {
+                                                    }, promo.id, false, {
                                                         fileName: "[project]/app/dashboard/page.tsx",
                                                         lineNumber: 496,
                                                         columnNumber: 19
@@ -2075,7 +2075,7 @@ function DashboardPage() {
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
-                                                    }, idx, true, {
+                                                    }, res.reservationId || `resv-${idx}`, true, {
                                                         fileName: "[project]/app/dashboard/page.tsx",
                                                         lineNumber: 517,
                                                         columnNumber: 22
