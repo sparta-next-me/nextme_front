@@ -622,7 +622,7 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/styled-jsx/style.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)"); // useMemo 추가
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/button.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/input.tsx [app-client] (ecmascript)");
@@ -640,6 +640,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2d$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__UserPlus$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/user-plus.js [app-client] (ecmascript) <export default as UserPlus>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$settings$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Settings$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/settings.js [app-client] (ecmascript) <export default as Settings>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/plus.js [app-client] (ecmascript) <export default as Plus>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/search.js [app-client] (ecmascript) <export default as Search>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/dialog.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$stomp$2f$stompjs$2f$esm6$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@stomp/stompjs/esm6/client.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sockjs$2d$client$2f$lib$2f$entry$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/sockjs-client/lib/entry.js [app-client] (ecmascript)");
@@ -676,13 +677,18 @@ function RealTimeChatPage() {
     const [oldestMessageId, setOldestMessageId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [oldestCreatedAt, setOldestCreatedAt] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [allUsers, setAllUsers] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [searchTerm, setSearchTerm] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("") // 검색어 상태 추가
+    ;
     const [isUserModalOpen, setIsUserModalOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isLoadingUsers, setIsLoadingUsers] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [isCreating, setIsCreating] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [newGroupTitle, setNewGroupTitle] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const stompClient = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const scrollRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const subscriptionRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const API_BASE = 'http://sparta-nextme.xyz:30000';
+    const USER_API_BASE = '/user-api';
+    // [기존 함수 유지]
     const getMessageDateId = (createdAt)=>{
         if (!createdAt) return "";
         try {
@@ -739,7 +745,6 @@ function RealTimeChatPage() {
         const dict = JSON.parse(saved);
         return dict[roomId] || "";
     };
-    // [수정] v1/chats/room 호출 시 응답의 lastMessage를 우선적으로 매핑
     const loadRooms = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
         "RealTimeChatPage.useCallback[loadRooms]": async (type)=>{
             const token = localStorage.getItem("accessToken");
@@ -755,9 +760,7 @@ function RealTimeChatPage() {
                 const mappedRooms = roomList.map({
                     "RealTimeChatPage.useCallback[loadRooms].mappedRooms": (room)=>{
                         const rId = String(room.chatRoomId || room.id);
-                        // 서버 응답의 lastMessage를 최우선으로 사용
                         const serverLastMsg = room.lastMessage || room.lastChatMessage?.content;
-                        // 서버 데이터가 없을 때만 로컬 스토리지 보조 사용
                         let finalMsg = serverLastMsg || getLastMsgFromLocal(rId) || "대화 내용이 없습니다.";
                         if (serverLastMsg) saveLastMsgToLocal(rId, serverLastMsg);
                         return {
@@ -766,7 +769,6 @@ function RealTimeChatPage() {
                         };
                     }
                 }["RealTimeChatPage.useCallback[loadRooms].mappedRooms"]);
-                // ID 중복 제거 (Key 에러 방지)
                 const uniqueRooms = mappedRooms.filter({
                     "RealTimeChatPage.useCallback[loadRooms].uniqueRooms": (room, idx, self)=>idx === self.findIndex({
                             "RealTimeChatPage.useCallback[loadRooms].uniqueRooms": (r)=>(r.chatRoomId || r.id) === (room.chatRoomId || room.id)
@@ -977,18 +979,43 @@ function RealTimeChatPage() {
             console.error(e);
         }
     };
-    const loadAllUsers = ()=>{
-        setAllUsers([
-            {
-                id: "11111111-1111-1111-1111-111111111111",
-                name: "딸기",
-                email: "test@sparta.com"
+    const loadAllUsers = async ()=>{
+        setIsLoadingUsers(true);
+        const token = localStorage.getItem("accessToken");
+        const currentMyId = localStorage.getItem("userId");
+        try {
+            const res = await fetch(`${USER_API_BASE}/v1/user/admin/users/`, {
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
+            });
+            const data = await res.json();
+            if (data.isSuccess && data.result?.content) {
+                const filtered = data.result.content.filter((u)=>(u.role === "USER" || u.role === "ADVISOR") && String(u.userId) !== String(currentMyId));
+                setAllUsers(filtered);
             }
-        ]);
+        } catch (e) {
+            console.error("유저 목록 조회 중 에러 발생:", e);
+        } finally{
+            setIsLoadingUsers(false);
+        }
     };
+    // [신규] 유저 검색 필터링 로직
+    const filteredUsers = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
+        "RealTimeChatPage.useMemo[filteredUsers]": ()=>{
+            if (!searchTerm.trim()) return allUsers;
+            return allUsers.filter({
+                "RealTimeChatPage.useMemo[filteredUsers]": (user)=>user.name?.toLowerCase().includes(searchTerm.toLowerCase())
+            }["RealTimeChatPage.useMemo[filteredUsers]"]);
+        }
+    }["RealTimeChatPage.useMemo[filteredUsers]"], [
+        allUsers,
+        searchTerm
+    ]);
     const startDirectChat = async (targetUser)=>{
         if (isCreating) return;
-        const alreadyExist = rooms.find((room)=>(room.roomType === "DIRECT" || room.type === "DIRECT") && (room.invitedUserId === targetUser.id || room.opponentId === targetUser.id));
+        const targetId = targetUser.userId;
+        const alreadyExist = rooms.find((room)=>(room.roomType === "DIRECT" || room.type === "DIRECT") && (room.invitedUserId === targetId || room.opponentId === targetId));
         if (alreadyExist) {
             setIsUserModalOpen(false);
             setActiveTab("DIRECT");
@@ -1006,14 +1033,17 @@ function RealTimeChatPage() {
                 },
                 body: JSON.stringify({
                     roomType: "DIRECT",
-                    inviteUserId: targetUser.id
+                    inviteUserId: targetId,
+                    invitedUserName: targetUser.name
                 })
             });
             const data = await res.json();
-            setIsUserModalOpen(false);
-            setActiveTab("DIRECT");
-            await loadRooms("DIRECT");
-            selectRoom(data.result || data);
+            if (res.ok) {
+                setIsUserModalOpen(false);
+                setActiveTab("DIRECT");
+                await loadRooms("DIRECT");
+                selectRoom(data.result || data);
+            }
         } catch (e) {
             console.error(e);
         } finally{
@@ -1072,12 +1102,12 @@ function RealTimeChatPage() {
                                                     className: "h-5 w-5"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                    lineNumber: 374,
+                                                    lineNumber: 402,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                lineNumber: 373,
+                                                lineNumber: 401,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -1085,19 +1115,20 @@ function RealTimeChatPage() {
                                                 children: "메시지"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                lineNumber: 376,
+                                                lineNumber: 404,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                        lineNumber: 372,
+                                        lineNumber: 400,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Dialog"], {
                                         open: isUserModalOpen,
                                         onOpenChange: (open)=>{
                                             setIsUserModalOpen(open);
+                                            if (!open) setSearchTerm("");
                                             if (open) loadAllUsers();
                                         },
                                         children: [
@@ -1111,17 +1142,17 @@ function RealTimeChatPage() {
                                                         className: "h-5 w-5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                        lineNumber: 380,
+                                                        lineNumber: 408,
                                                         columnNumber: 137
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                    lineNumber: 380,
+                                                    lineNumber: 408,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                lineNumber: 379,
+                                                lineNumber: 407,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$dialog$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DialogContent"], {
@@ -1133,12 +1164,12 @@ function RealTimeChatPage() {
                                                             children: "새 대화 시작"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                            lineNumber: 383,
+                                                            lineNumber: 411,
                                                             columnNumber: 31
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                        lineNumber: 383,
+                                                        lineNumber: 411,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tabs"], {
@@ -1154,7 +1185,7 @@ function RealTimeChatPage() {
                                                                         children: "1:1 메시지"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                        lineNumber: 386,
+                                                                        lineNumber: 414,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -1163,61 +1194,160 @@ function RealTimeChatPage() {
                                                                         children: "그룹 채널"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                        lineNumber: 387,
+                                                                        lineNumber: 415,
                                                                         columnNumber: 21
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                lineNumber: 385,
+                                                                lineNumber: 413,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsContent"], {
                                                                 value: "direct",
-                                                                className: "py-4 space-y-2 max-h-[300px] overflow-y-auto custom-scrollbar",
-                                                                children: allUsers.map((user)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                                        disabled: isCreating,
-                                                                        onClick: ()=>startDirectChat(user),
-                                                                        className: "jsx-62d3116db73058f7" + " " + `w-full p-3 flex items-center gap-3 rounded-xl hover:bg-secondary/50 text-left transition-all ${isCreating ? 'opacity-50' : ''}`,
+                                                                className: "py-4 space-y-4",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "jsx-62d3116db73058f7" + " " + "relative",
                                                                         children: [
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Avatar"], {
-                                                                                className: "h-10 w-10",
-                                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AvatarFallback"], {
-                                                                                    children: user.name?.charAt(0)
-                                                                                }, void 0, false, {
-                                                                                    fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                                    lineNumber: 392,
-                                                                                    columnNumber: 55
-                                                                                }, this)
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$search$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Search$3e$__["Search"], {
+                                                                                className: "absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                                lineNumber: 392,
-                                                                                columnNumber: 25
+                                                                                lineNumber: 420,
+                                                                                columnNumber: 23
                                                                             }, this),
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                                className: "jsx-62d3116db73058f7" + " " + "flex flex-1 justify-between items-center",
-                                                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                                    className: "jsx-62d3116db73058f7" + " " + "font-bold text-sm",
-                                                                                    children: user.name
-                                                                                }, void 0, false, {
-                                                                                    fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                                    lineNumber: 393,
-                                                                                    columnNumber: 83
-                                                                                }, this)
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
+                                                                                placeholder: "이름으로 검색...",
+                                                                                value: searchTerm,
+                                                                                onChange: (e)=>setSearchTerm(e.target.value),
+                                                                                className: "pl-9 h-10 bg-secondary/30 border-none rounded-xl text-sm"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                                lineNumber: 393,
-                                                                                columnNumber: 25
+                                                                                lineNumber: 421,
+                                                                                columnNumber: 23
                                                                             }, this)
                                                                         ]
-                                                                    }, `user-${user.id}`, true, {
+                                                                    }, void 0, true, {
                                                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                        lineNumber: 391,
-                                                                        columnNumber: 23
-                                                                    }, this))
-                                                            }, void 0, false, {
+                                                                        lineNumber: 419,
+                                                                        columnNumber: 21
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "jsx-62d3116db73058f7" + " " + "max-h-[300px] overflow-y-auto custom-scrollbar space-y-1",
+                                                                        children: isLoadingUsers ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: "jsx-62d3116db73058f7" + " " + "flex flex-col items-center justify-center py-10 gap-2",
+                                                                            children: [
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
+                                                                                    className: "h-6 w-6 animate-spin text-primary"
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/app/dashboard/chat/page.tsx",
+                                                                                    lineNumber: 432,
+                                                                                    columnNumber: 27
+                                                                                }, this),
+                                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                                    className: "jsx-62d3116db73058f7" + " " + "text-xs text-muted-foreground font-bold",
+                                                                                    children: "유저 목록 불러오는 중..."
+                                                                                }, void 0, false, {
+                                                                                    fileName: "[project]/app/dashboard/chat/page.tsx",
+                                                                                    lineNumber: 433,
+                                                                                    columnNumber: 27
+                                                                                }, this)
+                                                                            ]
+                                                                        }, void 0, true, {
+                                                                            fileName: "[project]/app/dashboard/chat/page.tsx",
+                                                                            lineNumber: 431,
+                                                                            columnNumber: 25
+                                                                        }, this) : filteredUsers.length > 0 ? filteredUsers.map((user)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                                                disabled: isCreating,
+                                                                                onClick: ()=>startDirectChat(user),
+                                                                                className: "jsx-62d3116db73058f7" + " " + `w-full p-3 flex items-center gap-3 rounded-xl hover:bg-secondary/50 text-left transition-all ${isCreating ? 'opacity-50' : ''}`,
+                                                                                children: [
+                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Avatar"], {
+                                                                                        className: "h-10 w-10 ring-2 ring-primary/5",
+                                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$avatar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AvatarFallback"], {
+                                                                                            className: "bg-primary/10 text-primary font-bold",
+                                                                                            children: user.name?.charAt(0)
+                                                                                        }, void 0, false, {
+                                                                                            fileName: "[project]/app/dashboard/chat/page.tsx",
+                                                                                            lineNumber: 438,
+                                                                                            columnNumber: 81
+                                                                                        }, this)
+                                                                                    }, void 0, false, {
+                                                                                        fileName: "[project]/app/dashboard/chat/page.tsx",
+                                                                                        lineNumber: 438,
+                                                                                        columnNumber: 29
+                                                                                    }, this),
+                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                                        className: "jsx-62d3116db73058f7" + " " + "flex flex-1 justify-between items-center",
+                                                                                        children: [
+                                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                                                className: "jsx-62d3116db73058f7",
+                                                                                                children: [
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                                                        className: "jsx-62d3116db73058f7" + " " + "font-bold text-sm",
+                                                                                                        children: user.name
+                                                                                                    }, void 0, false, {
+                                                                                                        fileName: "[project]/app/dashboard/chat/page.tsx",
+                                                                                                        lineNumber: 441,
+                                                                                                        columnNumber: 33
+                                                                                                    }, this),
+                                                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                                                        className: "jsx-62d3116db73058f7" + " " + "text-[10px] text-muted-foreground uppercase font-black",
+                                                                                                        children: user.role
+                                                                                                    }, void 0, false, {
+                                                                                                        fileName: "[project]/app/dashboard/chat/page.tsx",
+                                                                                                        lineNumber: 442,
+                                                                                                        columnNumber: 33
+                                                                                                    }, this)
+                                                                                                ]
+                                                                                            }, void 0, true, {
+                                                                                                fileName: "[project]/app/dashboard/chat/page.tsx",
+                                                                                                lineNumber: 440,
+                                                                                                columnNumber: 31
+                                                                                            }, this),
+                                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                                                className: "jsx-62d3116db73058f7" + " " + "h-2 w-2 rounded-full bg-green-500/50"
+                                                                                            }, void 0, false, {
+                                                                                                fileName: "[project]/app/dashboard/chat/page.tsx",
+                                                                                                lineNumber: 444,
+                                                                                                columnNumber: 31
+                                                                                            }, this)
+                                                                                        ]
+                                                                                    }, void 0, true, {
+                                                                                        fileName: "[project]/app/dashboard/chat/page.tsx",
+                                                                                        lineNumber: 439,
+                                                                                        columnNumber: 29
+                                                                                    }, this)
+                                                                                ]
+                                                                            }, `user-${user.userId}`, true, {
+                                                                                fileName: "[project]/app/dashboard/chat/page.tsx",
+                                                                                lineNumber: 437,
+                                                                                columnNumber: 27
+                                                                            }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                            className: "jsx-62d3116db73058f7" + " " + "text-center py-10",
+                                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                                className: "jsx-62d3116db73058f7" + " " + "text-sm text-muted-foreground font-bold italic text-zinc-400",
+                                                                                children: searchTerm ? "검색 결과가 없습니다." : "조회된 유저가 없습니다."
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/app/dashboard/chat/page.tsx",
+                                                                                lineNumber: 450,
+                                                                                columnNumber: 27
+                                                                            }, this)
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/app/dashboard/chat/page.tsx",
+                                                                            lineNumber: 449,
+                                                                            columnNumber: 25
+                                                                        }, this)
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/dashboard/chat/page.tsx",
+                                                                        lineNumber: 429,
+                                                                        columnNumber: 21
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
                                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                lineNumber: 389,
+                                                                lineNumber: 417,
                                                                 columnNumber: 19
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsContent"], {
@@ -1233,7 +1363,7 @@ function RealTimeChatPage() {
                                                                                 children: "채널 이름"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                                lineNumber: 399,
+                                                                                lineNumber: 459,
                                                                                 columnNumber: 23
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -1244,13 +1374,13 @@ function RealTimeChatPage() {
                                                                                 className: "bg-secondary/30 border-none h-11 rounded-xl"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                                lineNumber: 400,
+                                                                                lineNumber: 460,
                                                                                 columnNumber: 23
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                        lineNumber: 398,
+                                                                        lineNumber: 458,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1262,50 +1392,50 @@ function RealTimeChatPage() {
                                                                                 className: "h-4 w-4 animate-spin mr-2"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                                lineNumber: 403,
+                                                                                lineNumber: 463,
                                                                                 columnNumber: 37
                                                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
                                                                                 className: "h-4 w-4 mr-2"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                                lineNumber: 403,
+                                                                                lineNumber: 463,
                                                                                 columnNumber: 89
                                                                             }, this),
                                                                             " 새 그룹 채널 생성"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                        lineNumber: 402,
+                                                                        lineNumber: 462,
                                                                         columnNumber: 21
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                lineNumber: 397,
+                                                                lineNumber: 457,
                                                                 columnNumber: 19
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                        lineNumber: 384,
+                                                        lineNumber: 412,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                lineNumber: 382,
+                                                lineNumber: 410,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                        lineNumber: 378,
+                                        lineNumber: 406,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                lineNumber: 371,
+                                lineNumber: 399,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tabs"], {
@@ -1324,7 +1454,7 @@ function RealTimeChatPage() {
                                             children: "그룹 채널"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                                            lineNumber: 412,
+                                            lineNumber: 472,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$tabs$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["TabsTrigger"], {
@@ -1333,24 +1463,24 @@ function RealTimeChatPage() {
                                             children: "1:1 메시지"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                                            lineNumber: 413,
+                                            lineNumber: 473,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/dashboard/chat/page.tsx",
-                                    lineNumber: 411,
+                                    lineNumber: 471,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                lineNumber: 410,
+                                lineNumber: 470,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                        lineNumber: 370,
+                        lineNumber: 398,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1368,18 +1498,18 @@ function RealTimeChatPage() {
                                             className: "h-5 w-5"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                                            lineNumber: 423,
+                                            lineNumber: 483,
                                             columnNumber: 208
                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__["User"], {
                                             className: "h-5 w-5"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                                            lineNumber: 423,
+                                            lineNumber: 483,
                                             columnNumber: 239
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                        lineNumber: 423,
+                                        lineNumber: 483,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1390,7 +1520,7 @@ function RealTimeChatPage() {
                                                 children: room.title || room.name
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                lineNumber: 425,
+                                                lineNumber: 485,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1398,25 +1528,25 @@ function RealTimeChatPage() {
                                                 children: room.lastMessage
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                lineNumber: 427,
+                                                lineNumber: 486,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                        lineNumber: 424,
+                                        lineNumber: 484,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, `room-list-${activeTab}-${rId}`, true, {
                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                lineNumber: 422,
+                                lineNumber: 482,
                                 columnNumber: 15
                             }, this);
                         })
                     }, void 0, false, {
                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                        lineNumber: 417,
+                        lineNumber: 477,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1431,12 +1561,12 @@ function RealTimeChatPage() {
                                         children: userName?.charAt(0)
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                        lineNumber: 435,
+                                        lineNumber: 494,
                                         columnNumber: 67
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/chat/page.tsx",
-                                    lineNumber: 435,
+                                    lineNumber: 494,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1450,7 +1580,7 @@ function RealTimeChatPage() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                                            lineNumber: 436,
+                                            lineNumber: 495,
                                             columnNumber: 47
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1460,7 +1590,7 @@ function RealTimeChatPage() {
                                                     className: "jsx-62d3116db73058f7" + " " + `h-1.5 w-1.5 rounded-full ${isConnected ? 'bg-green-500 animate-pulse' : 'bg-red-500'}`
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                    lineNumber: 436,
+                                                    lineNumber: 495,
                                                     columnNumber: 151
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1468,19 +1598,19 @@ function RealTimeChatPage() {
                                                     children: isConnected ? 'Online' : 'Offline'
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                    lineNumber: 436,
+                                                    lineNumber: 495,
                                                     columnNumber: 258
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                                            lineNumber: 436,
+                                            lineNumber: 495,
                                             columnNumber: 108
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/dashboard/chat/page.tsx",
-                                    lineNumber: 436,
+                                    lineNumber: 495,
                                     columnNumber: 15
                                 }, this),
                                 userRole === "USER" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1492,29 +1622,29 @@ function RealTimeChatPage() {
                                         className: "h-4 w-4"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                        lineNumber: 437,
+                                        lineNumber: 496,
                                         columnNumber: 187
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/chat/page.tsx",
-                                    lineNumber: 437,
+                                    lineNumber: 496,
                                     columnNumber: 39
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                            lineNumber: 434,
+                            lineNumber: 493,
                             columnNumber: 12
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                        lineNumber: 433,
+                        lineNumber: 492,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                lineNumber: 369,
+                lineNumber: 397,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -1533,18 +1663,18 @@ function RealTimeChatPage() {
                                                 className: "h-5 w-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                lineNumber: 446,
+                                                lineNumber: 505,
                                                 columnNumber: 207
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__["User"], {
                                                 className: "h-5 w-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                lineNumber: 446,
+                                                lineNumber: 505,
                                                 columnNumber: 238
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                                            lineNumber: 446,
+                                            lineNumber: 505,
                                             columnNumber: 56
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1552,13 +1682,13 @@ function RealTimeChatPage() {
                                             children: currentRoom.title || currentRoom.name
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                                            lineNumber: 446,
+                                            lineNumber: 505,
                                             columnNumber: 273
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/dashboard/chat/page.tsx",
-                                    lineNumber: 446,
+                                    lineNumber: 505,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1571,20 +1701,20 @@ function RealTimeChatPage() {
                                             className: "h-4 w-4 mr-2"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                                            lineNumber: 447,
+                                            lineNumber: 506,
                                             columnNumber: 212
                                         }, this),
                                         " 나가기"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/dashboard/chat/page.tsx",
-                                    lineNumber: 447,
+                                    lineNumber: 506,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                            lineNumber: 445,
+                            lineNumber: 504,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1598,12 +1728,12 @@ function RealTimeChatPage() {
                                         className: "h-5 w-5 animate-spin mx-auto text-muted-foreground"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                        lineNumber: 450,
+                                        lineNumber: 509,
                                         columnNumber: 70
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/chat/page.tsx",
-                                    lineNumber: 450,
+                                    lineNumber: 509,
                                     columnNumber: 36
                                 }, this),
                                 messages.map((msg, idx)=>{
@@ -1622,20 +1752,20 @@ function RealTimeChatPage() {
                                                         children: msgDateId
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                        lineNumber: 460,
+                                                        lineNumber: 519,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "jsx-62d3116db73058f7" + " " + "absolute top-1/2 left-0 right-0 h-[1px] bg-border/20 -z-0"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                        lineNumber: 461,
+                                                        lineNumber: 520,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                lineNumber: 459,
+                                                lineNumber: 518,
                                                 columnNumber: 23
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1652,12 +1782,12 @@ function RealTimeChatPage() {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                        lineNumber: 466,
+                                                        lineNumber: 525,
                                                         columnNumber: 110
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                    lineNumber: 466,
+                                                    lineNumber: 525,
                                                     columnNumber: 25
                                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "jsx-62d3116db73058f7" + " " + `flex ${String(msg.senderId) === String(userId) ? "justify-end" : "justify-start"} animate-in fade-in slide-in-from-bottom-2 duration-300`,
@@ -1669,7 +1799,7 @@ function RealTimeChatPage() {
                                                                 children: msg.senderName
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                lineNumber: 470,
+                                                                lineNumber: 529,
                                                                 columnNumber: 73
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1680,7 +1810,7 @@ function RealTimeChatPage() {
                                                                         children: renderTime(msg.createdAt)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                        lineNumber: 472,
+                                                                        lineNumber: 531,
                                                                         columnNumber: 75
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -1688,7 +1818,7 @@ function RealTimeChatPage() {
                                                                         children: msg.content
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                        lineNumber: 473,
+                                                                        lineNumber: 532,
                                                                         columnNumber: 31
                                                                     }, this),
                                                                     String(msg.senderId) !== String(userId) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1696,42 +1826,42 @@ function RealTimeChatPage() {
                                                                         children: renderTime(msg.createdAt)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                        lineNumber: 474,
+                                                                        lineNumber: 533,
                                                                         columnNumber: 75
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                                lineNumber: 471,
+                                                                lineNumber: 530,
                                                                 columnNumber: 29
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                        lineNumber: 469,
+                                                        lineNumber: 528,
                                                         columnNumber: 27
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                    lineNumber: 468,
+                                                    lineNumber: 527,
                                                     columnNumber: 25
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                                lineNumber: 464,
+                                                lineNumber: 523,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, msgKey, true, {
                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                        lineNumber: 457,
+                                        lineNumber: 516,
                                         columnNumber: 19
                                     }, this);
                                 })
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                            lineNumber: 449,
+                            lineNumber: 508,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -1747,7 +1877,7 @@ function RealTimeChatPage() {
                                         className: "flex-1 h-12 bg-secondary/40 border-none rounded-xl px-4 font-medium"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                        lineNumber: 485,
+                                        lineNumber: 544,
                                         columnNumber: 91
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -1759,23 +1889,23 @@ function RealTimeChatPage() {
                                             className: "h-5 w-5 text-primary-foreground"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                                            lineNumber: 485,
+                                            lineNumber: 544,
                                             columnNumber: 440
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/dashboard/chat/page.tsx",
-                                        lineNumber: 485,
+                                        lineNumber: 544,
                                         columnNumber: 275
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                lineNumber: 485,
+                                lineNumber: 544,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                            lineNumber: 484,
+                            lineNumber: 543,
                             columnNumber: 13
                         }, this)
                     ]
@@ -1788,12 +1918,12 @@ function RealTimeChatPage() {
                                 className: "h-8 w-8 text-muted-foreground/20"
                             }, void 0, false, {
                                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                                lineNumber: 489,
+                                lineNumber: 548,
                                 columnNumber: 201
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                            lineNumber: 489,
+                            lineNumber: 548,
                             columnNumber: 108
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1801,18 +1931,18 @@ function RealTimeChatPage() {
                             children: "채팅방을 선택해주세요"
                         }, void 0, false, {
                             fileName: "[project]/app/dashboard/chat/page.tsx",
-                            lineNumber: 489,
+                            lineNumber: 548,
                             columnNumber: 269
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/dashboard/chat/page.tsx",
-                    lineNumber: 489,
+                    lineNumber: 548,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/dashboard/chat/page.tsx",
-                lineNumber: 442,
+                lineNumber: 501,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1822,11 +1952,11 @@ function RealTimeChatPage() {
         ]
     }, void 0, true, {
         fileName: "[project]/app/dashboard/chat/page.tsx",
-        lineNumber: 368,
+        lineNumber: 396,
         columnNumber: 5
     }, this);
 }
-_s(RealTimeChatPage, "ypZBEiUYr+fJ0psG6q7F53NCq+o=", false, function() {
+_s(RealTimeChatPage, "Kro6RzjRvRWIpyqGM67oxhbA6+E=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];

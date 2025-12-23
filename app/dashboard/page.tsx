@@ -321,7 +321,7 @@ export default function DashboardPage() {
             </div>
             <div className="flex-1 overflow-y-auto space-y-2 pr-1 scrollbar-hide text-xs font-bold">
               {isLinked ? linkedAccounts.map((acc, i) => (
-                <div key={i} className="flex justify-between items-center p-1 hover:bg-secondary/20 rounded-md transition-colors group">
+                <div key={acc.accountId || `acc-${i}`} className="flex justify-between items-center p-1 hover:bg-secondary/20 rounded-md transition-colors group">
                   <div className="flex items-center gap-2">
                     <div className="h-5 w-5 relative overflow-hidden rounded-full border bg-white flex-shrink-0">
                       {BANK_LOGOS[acc.bankName] ? (
@@ -493,18 +493,15 @@ export default function DashboardPage() {
               </div>
               <div className="space-y-3 relative z-10">
                 {activePromos.map((promo) => (
-                  <Link href={`/dashboard/promotion/${promo.id}`} key={promo.id} className="block group">
-                    <div className="p-4 bg-background/60 hover:bg-primary/[0.03] rounded-xl border border-border/50 group-hover:border-primary/30 transition-all duration-200 flex items-center justify-between shadow-sm">
-                      <div className="flex flex-col gap-1">
-                        <span className="text-[12px] font-bold text-foreground group-hover:text-primary transition-colors truncate max-w-[140px]">{promo.name}</span>
-                        <div className="flex items-center gap-1.5">
-                          <div className="bg-primary/10 text-primary text-[9px] font-black px-1.5 py-0.5 rounded">REWARD</div>
-                          <span className="text-foreground font-black text-[11px]">{promo.pointAmount.toLocaleString()}P</span>
-                        </div>
+                  <div key={promo.id} className="p-4 bg-background/60 hover:bg-primary/[0.03] rounded-xl border border-border/50 group-hover:border-primary/30 transition-all duration-200 flex items-center justify-between shadow-sm">
+                    <div className="flex flex-col gap-1">
+                      <span className="text-[12px] font-bold text-foreground group-hover:text-primary transition-colors truncate max-w-[140px]">{promo.name}</span>
+                      <div className="flex items-center gap-1.5">
+                        <div className="bg-primary/10 text-primary text-[9px] font-black px-1.5 py-0.5 rounded">REWARD</div>
+                        <span className="text-foreground font-black text-[11px]">{promo.pointAmount.toLocaleString()}P</span>
                       </div>
-                      <div className="h-8 w-8 rounded-full bg-secondary/50 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all"><ChevronRight className="h-4 w-4" /></div>
                     </div>
-                  </Link>
+                  </div>
                 ))}
               </div>
             </Card>
@@ -517,7 +514,7 @@ export default function DashboardPage() {
               <div className="space-y-3">
                 {myReservations.filter(r => r.status !== "CANCELLED").length > 0 ? 
                   myReservations.filter(r => r.status !== "CANCELLED").slice(0, 3).map((res: any, idx) => (
-                     <div key={idx} className="bg-background/40 p-4 rounded-xl border border-border/50 flex justify-between items-center shadow-sm hover:border-primary/20 transition-colors">
+                     <div key={res.reservationId || `resv-${idx}`} className="bg-background/40 p-4 rounded-xl border border-border/50 flex justify-between items-center shadow-sm hover:border-primary/20 transition-colors">
                         <div className="min-w-0">
                           <p className="text-[11px] font-black truncate text-foreground">{res.productName}</p>
                           <div className="flex items-center gap-2 text-[10px] text-muted-foreground font-bold mt-1">
@@ -537,6 +534,3 @@ export default function DashboardPage() {
     </div>
   )
 }
-
-
-
