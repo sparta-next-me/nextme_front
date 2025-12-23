@@ -7,3 +7,4 @@
 /dataSources/
 /dataSources.local.xml
 echo "node_modules/" >> .gitignore
+.DS_Store
