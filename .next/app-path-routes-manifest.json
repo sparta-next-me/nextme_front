@@ -1,0 +1,13 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/dashboard/chat/page": "/dashboard/chat",
+  "/dashboard/consultation/page": "/dashboard/consultation",
+  "/dashboard/goals/page": "/dashboard/goals",
+  "/dashboard/page": "/dashboard",
+  "/dashboard/settings/page": "/dashboard/settings",
+  "/login/page": "/login",
+  "/oauth/redirect/page": "/oauth/redirect",
+  "/page": "/",
+  "/signup/page": "/signup"
+}
