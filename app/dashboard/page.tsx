@@ -493,18 +493,15 @@ export default function DashboardPage() {
               </div>
               <div className="space-y-3 relative z-10">
                 {activePromos.map((promo) => (
-                  <Link href={`/dashboard/promotion/${promo.id}`} key={promo.id} className="block group">
-                    <div className="p-4 bg-background/60 hover:bg-primary/[0.03] rounded-xl border border-border/50 group-hover:border-primary/30 transition-all duration-200 flex items-center justify-between shadow-sm">
-                      <div className="flex flex-col gap-1">
-                        <span className="text-[12px] font-bold text-foreground group-hover:text-primary transition-colors truncate max-w-[140px]">{promo.name}</span>
-                        <div className="flex items-center gap-1.5">
-                          <div className="bg-primary/10 text-primary text-[9px] font-black px-1.5 py-0.5 rounded">REWARD</div>
-                          <span className="text-foreground font-black text-[11px]">{promo.pointAmount.toLocaleString()}P</span>
-                        </div>
+                  <div className="p-4 bg-background/60 hover:bg-primary/[0.03] rounded-xl border border-border/50 group-hover:border-primary/30 transition-all duration-200 flex items-center justify-between shadow-sm">
+                    <div className="flex flex-col gap-1">
+                      <span className="text-[12px] font-bold text-foreground group-hover:text-primary transition-colors truncate max-w-[140px]">{promo.name}</span>
+                      <div className="flex items-center gap-1.5">
+                        <div className="bg-primary/10 text-primary text-[9px] font-black px-1.5 py-0.5 rounded">REWARD</div>
+                        <span className="text-foreground font-black text-[11px]">{promo.pointAmount.toLocaleString()}P</span>
                       </div>
-                      <div className="h-8 w-8 rounded-full bg-secondary/50 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all"><ChevronRight className="h-4 w-4" /></div>
                     </div>
-                  </Link>
+                  </div>
                 ))}
               </div>
             </Card>
